@@ -16,7 +16,7 @@ Dự án **Thiết kế hệ thống giám sát và điều khiển nhiệt đ�
 - **Xuyên thấu NAT & Bảo mật (NAT Traversal):** Sử dụng Tailscale (dựa trên nền tảng giao thức mã hóa WireGuard) cài đặt trên Raspberry Pi, cung cấp IP ảo tĩnh (100.x.x.x) để quản trị an toàn từ mọi nơi[cite: 21].
 
 ## ⚙️ Cấu trúc Phần cứng
-![Mô hình phần cứng thực tế](./img/hardware_setup.jpg)
+![Mô hình phần cứng thực tế](./img/hardware_setup.png)
 - **Vi điều khiển trung tâm (MCU):** ESP32-S3 DevKit[cite: 24]
 - **Máy chủ (IoT Gateway):** Raspberry Pi 4 (Chạy Mosquitto Broker & Node-RED)[cite: 26]
 - **Cảm biến (Sensor):** SHT31 (Giao tiếp I2C)[cite: 25]
