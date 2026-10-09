@@ -15,7 +15,7 @@ Dự án **Thiết kế hệ thống giám sát và điều khiển nhiệt đ�
 - **Truyền thông phi tập trung (Decentralized Comms):** Giao thức MQTT được thiết lập mức chất lượng dịch vụ QoS 1, đảm bảo gói tin điều khiển (Setpoint) chắc chắn được gửi đến đích ít nhất một lần ngay cả khi mạng chập chờn.
 - **Xuyên thấu NAT & Bảo mật (NAT Traversal):** Sử dụng Tailscale (dựa trên nền tảng giao thức mã hóa WireGuard) cài đặt trên Raspberry Pi, cung cấp IP ảo tĩnh (100.x.x.x) để quản trị an toàn từ mọi nơi.
 
-## ⚙️ Cấu trúc Phần cứng
+## Cấu trúc Phần cứng
 ![Mô hình phần cứng thực tế](./img/hardware_setup.png)
 - **Vi điều khiển trung tâm (MCU):** ESP32-S3 DevKit
 - **Máy chủ (IoT Gateway):** Raspberry Pi 4 (Chạy Mosquitto Broker & Node-RED)
@@ -23,7 +23,7 @@ Dự án **Thiết kế hệ thống giám sát và điều khiển nhiệt đ�
 - **Động cơ chấp hành (Actuator):** Sò nóng lạnh Peltier (TEC) 5V kết hợp hệ thống quạt và nhôm tản nhiệt
 - **IC Công suất (Driver):** Mạch cầu H L298N (Nhận tín hiệu băm xung PWM ở tần số 18kHz, độ phân giải 12-bit để điều tiết dòng cho sò Peltier)
 
-## 🧩 Cấu trúc Phần mềm
+## Cấu trúc Phần mềm
 Hệ thống được thiết kế theo mô hình phân lớp (Layered Architecture) gồm 6 tầng rõ rệt:
 1. **Hardware:** Lớp linh kiện vật lý (ESP32-S3, SHT31, L298N, Peltier).
 2. **HAL:** Lớp trừu tượng hóa phần cứng (I2C, PWM).
@@ -32,7 +32,7 @@ Hệ thống được thiết kế theo mô hình phân lớp (Layered Architect
 5. **Communication:** Ngăn xếp Wi-Fi và MQTT Client đóng gói JSON.
 6. **Cloud / Backend:** Máy chủ Node-RED, Mosquitto Broker và Tailscale VPN.
 
-## 🚀 Hướng dẫn hệ thống
+## Hướng dẫn hệ thống
 
 ### Cấu trúc Topic MQTT
 - `hethong/temp_control`: ESP32 publish dữ liệu giám sát định kỳ (Nhiệt độ, Độ ẩm, Setpoint hiện tại, mức PWM, Mode) với chu kỳ 1 giây/lần.
