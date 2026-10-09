@@ -15,21 +15,12 @@ Dự án **Thiết kế hệ thống giám sát và điều khiển nhiệt đ�
 - **Truyền thông phi tập trung (Decentralized Comms):** Giao thức MQTT được thiết lập mức chất lượng dịch vụ QoS 1, đảm bảo gói tin điều khiển (Setpoint) chắc chắn được gửi đến đích ít nhất một lần ngay cả khi mạng chập chờn.
 - **Xuyên thấu NAT & Bảo mật (NAT Traversal):** Sử dụng Tailscale (dựa trên nền tảng giao thức mã hóa WireGuard) cài đặt trên Raspberry Pi, cung cấp IP ảo tĩnh (100.x.x.x) để quản trị an toàn từ mọi nơi.
 
-<<<<<<< HEAD
 ## Cấu trúc Phần cứng
 ![Mô hình phần cứng thực tế](./img/hardware_setup.png)
 - **Vi điều khiển trung tâm (MCU):** ESP32-S3 DevKit
 - **Máy chủ (IoT Gateway):** Raspberry Pi 4 (Chạy Mosquitto Broker & Node-RED)
 - **Cảm biến (Sensor):** SHT31 (Giao tiếp I2C)
 - **Động cơ chấp hành (Actuator):** Sò nóng lạnh Peltier (TEC) 5V kết hợp hệ thống quạt và nhôm tản nhiệt
-=======
-## ⚙️ Cấu trúc Phần cứng
-![Mô hình phần cứng thực tế](./img/hardware_setup.png)
-- **Vi điều khiển trung tâm (MCU):** ESP32-S3 DevKit[cite: 24]
-- **Máy chủ (IoT Gateway):** Raspberry Pi 4 (Chạy Mosquitto Broker & Node-RED)[cite: 26]
-- **Cảm biến (Sensor):** SHT31 (Giao tiếp I2C)[cite: 25]
-- **Động cơ chấp hành (Actuator):** Sò nóng lạnh Peltier (TEC) 5V kết hợp hệ thống quạt và nhôm tản nhiệt[cite: 25]
->>>>>>> 8e2d1850ee944eb05472816d34010589372c2ab5
 - **IC Công suất (Driver):** Mạch cầu H L298N (Nhận tín hiệu băm xung PWM ở tần số 18kHz, độ phân giải 12-bit để điều tiết dòng cho sò Peltier)
 
 ## Cấu trúc Phần mềm
